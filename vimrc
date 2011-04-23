@@ -88,3 +88,6 @@ set directory=~/.vim/backup
 set term=builtin_ansi
 
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
+
+" map jk to escape
+imap jk <ESC>

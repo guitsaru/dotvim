@@ -1,17 +1,12 @@
-directory "vim"
-directory "vim/autoload"
-directory "vim/bundle"
-directory "vim/colors"
-
 desc "installs pathogen"
 task :install_pathogen do
   puts "* installing pathogen"
-  sh "curl #{PATHOGEN_URL} > vim/autoload/pathogen.vim"
+  sh "curl https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim > vim/autoload/pathogen.vim"
 end
 
-plugin_tasks = []
+PLUGIN_TASKS = []
 def pathogen_task(name, url)
-  dir = "vim/autoload/#{name}"
+  dir = "vim/bundle/#{name}"
 
   namespace(name) do
     desc "installs #{name} plugin"
@@ -19,10 +14,11 @@ def pathogen_task(name, url)
       puts "* installing #{name}"
 
       sh "git clone #{url} #{dir}"
+      FileUtils.rm_rf("#{dir}/.git")
     end
   end
 
-  plugin_tasks << "#{name}:install"
+  PLUGIN_TASKS << "#{name}:install"
 end
 
 namespace(:vwilight) do
@@ -32,6 +28,8 @@ namespace(:vwilight) do
 
     sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > vim/colors/vwilight.vim"
   end
+
+  PLUGIN_TASKS << "vwilight:install"
 end
 
 pathogen_task "ack.vim", "git://github.com/mileszs/ack.vim.git"
@@ -65,5 +63,35 @@ pathogen_task "solarized", "git://github.com/altercation/vim-colors-solarized.gi
 pathogen_task "haskell", "git://github.com/vim-scripts/haskell.vim.git"
 pathogen_task "ruby", "git://github.com/vim-ruby/vim-ruby.git"
 
+desc "cleans the install"
+task :clean do
+  Dir["vim"].each {|d| FileUtils.rm_rf d }
+end
+
+desc "Set up vim folder"
+task :vim_folder do
+  FileUtils.mkdir("vim")
+  FileUtils.mkdir("vim/autoload")
+  FileUtils.mkdir("vim/bundle")
+  FileUtils.mkdir("vim/colors")
+  FileUtils.mkdir("vim/backup")
+end
+
+desc "installs plugins"
+task :install_plugins => PLUGIN_TASKS
+
+desc "link vim files"
+task :link do
+  %w[ vimrc gvimrc vim ].each do |file|
+    dest = File.expand_path("~/.#{file}")
+    unless File.exist?(dest)
+      ln_s(File.expand_path("../#{file}", __FILE__), dest)
+    end
+  end
+end
+
+
 desc "installs these dotfiles"
-task :install => [:install_pathogen] + plugin_tasks
+task :install => [:clean, :vim_folder, :install_pathogen, :install_plugins, :link]
+
+task :default => :install
