@@ -22,7 +22,7 @@ set list listchars=tab:\ \ ,trail:·
 set autoindent
 
 " Searching
-set hlsearch
+set nohlsearch
 set incsearch
 set ignorecase
 set smartcase
