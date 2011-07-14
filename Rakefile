@@ -62,6 +62,7 @@ pathogen_task "vividchalk", "git://github.com/tpope/vim-vividchalk.git"
 pathogen_task "solarized", "git://github.com/altercation/vim-colors-solarized.git"
 pathogen_task "haskell", "git://github.com/vim-scripts/haskell.vim.git"
 pathogen_task "ruby", "git://github.com/vim-ruby/vim-ruby.git"
+pathogen_task "go", "git://github.com/anzaika/go.vim.git"
 
 desc "cleans the install"
 task :clean do
