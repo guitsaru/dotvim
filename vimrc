@@ -101,3 +101,5 @@ let g:gist_open_browser_after_post = 1
 
 let g:ctags_command = '/usr/local/bin/ctags -R .'
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+
+let g:fugitive_git_executable = '/usr/local/bin/git'
