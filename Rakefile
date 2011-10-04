@@ -78,6 +78,7 @@ task :vim_folder do
   FileUtils.mkdir("vim/bundle")
   FileUtils.mkdir("vim/colors")
   FileUtils.mkdir("vim/backup")
+  FileUtils.mkdir("vim/macros")
 end
 
 desc "installs plugins"
