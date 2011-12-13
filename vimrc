@@ -45,7 +45,7 @@ au FileType make                                     set noexpandtab
 au FileType python                                   set noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru,*.jbuilder}    set ft=ruby
 
 function s:setupWrapping()
   set wrap
@@ -106,3 +106,9 @@ let g:ctags_command = '/usr/local/bin/ctags -R .'
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 let g:fugitive_git_executable = '/usr/local/bin/git'
+
+" Enable mouse support in terminal.app
+if has("mouse")
+  set mouse=a
+  set ttymouse=xterm2
+endif
