@@ -14,7 +14,6 @@ set guifont=Menlo:h12
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-color vwilight
 
 " If the parameter is a directory, cd into it
 function s:CdIfDirectory(directory)
