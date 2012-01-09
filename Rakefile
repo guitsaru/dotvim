@@ -66,6 +66,8 @@ pathogen_task "ruby", "git://github.com/vim-ruby/vim-ruby.git"
 pathogen_task "go", "git://github.com/anzaika/go.vim.git"
 pathogen_task "bundler", "https://github.com/tpope/vim-bundler.git"
 pathogen_task "commentary", "https://github.com/tpope/vim-commentary"
+pathogen_task "treetop", "git://github.com/nanki/treetop.vim.git"
+pathogen_task "ctrlp", "git://github.com/kien/ctrlp.vim.git"
 
 desc "cleans the install"
 task :clean do

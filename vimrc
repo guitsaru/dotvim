@@ -114,3 +114,6 @@ if has("mouse")
 endif
 
 color jellybeans
+
+" Make line numbers viewable in terminal vim
+:highlight LineNr ctermfg=grey
