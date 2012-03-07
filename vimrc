@@ -10,6 +10,8 @@ set number
 set ruler
 syntax on
 
+set colorcolumn=80
+
 set encoding=utf-8
 
 " Whitespace
