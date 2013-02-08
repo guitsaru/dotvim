@@ -15,6 +15,8 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 
+set background=light
+
 " If the parameter is a directory, cd into it
 function s:CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)

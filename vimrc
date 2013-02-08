@@ -87,9 +87,6 @@ set modelines=10
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" xterm not recognized right by vim
-set term=builtin_ansi
-
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
 
 " map jk to escape
@@ -115,7 +112,8 @@ if has("mouse")
   set ttymouse=xterm2
 endif
 
-color jellybeans
+set background=light
+color solarized
 
 " Make line numbers viewable in terminal vim
-:highlight LineNr ctermfg=grey
+" :highlight LineNr ctermfg=grey
