@@ -1,7 +1,6 @@
 " Activate Pathogen.vim
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 let mapleader=","
 set nocompatible
