@@ -34,7 +34,6 @@ end
 
 pathogen_task "ack.vim", "git://github.com/mileszs/ack.vim.git"
 pathogen_task "align", "git://github.com/tsaleh/vim-align.git"
-pathogen_task "bundler", "https://github.com/tpope/vim-bundler.git"
 pathogen_task "color-sampler", "git://github.com/vim-scripts/Color-Sampler-Pack.git"
 pathogen_task "commentary", "https://github.com/tpope/vim-commentary"
 pathogen_task "ctrlp", "git://github.com/kien/ctrlp.vim.git"
