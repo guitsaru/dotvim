@@ -67,6 +67,7 @@ pathogen_task "textile", "git://github.com/timcharper/textile.vim.git"
 pathogen_task "treetop", "git://github.com/nanki/treetop.vim.git"
 pathogen_task "unimpaired", "git://github.com/tpope/vim-unimpaired.git"
 pathogen_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
+pathogen_task "vim-rspec","https://github.com/thoughtbot/vim-rspec.git"
 pathogen_task "vividchalk", "git://github.com/tpope/vim-vividchalk.git"
 
 desc "cleans the install"

@@ -1,7 +1,7 @@
 " Activate Pathogen.vim
 filetype off
 call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 
 let mapleader=","
 set nocompatible
@@ -117,3 +117,9 @@ color solarized
 
 " Make line numbers viewable in terminal vim
 " :highlight LineNr ctermfg=grey
+
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
