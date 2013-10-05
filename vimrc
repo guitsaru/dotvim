@@ -1,6 +1,7 @@
 " Activate Pathogen.vim
 filetype off
-execute pathogen#infect()
+call pathogen#helptags()
+call pathogen#incubate()
 
 let mapleader=","
 set nocompatible
@@ -118,3 +119,12 @@ color solarized
 
 " Make line numbers viewable in terminal vim
 " :highlight LineNr ctermfg=grey
+
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" For chruby
+set shell=$SHELL\ -l
