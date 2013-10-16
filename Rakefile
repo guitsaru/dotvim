@@ -38,6 +38,7 @@ pathogen_task "color-sampler", "git://github.com/vim-scripts/Color-Sampler-Pack.
 pathogen_task "commentary", "https://github.com/tpope/vim-commentary"
 pathogen_task "ctrlp", "git://github.com/kien/ctrlp.vim.git"
 pathogen_task "cucumber", "git://github.com/tpope/vim-cucumber.git"
+pathogen_task "elixir", "git://github.com/elixir-lang/vim-elixir.git"
 pathogen_task "endwise", "git://github.com/tpope/vim-endwise.git"
 pathogen_task "eunuch", "git://github.com/tpope/vim-eunuch.git"
 pathogen_task "fugitive", "git://github.com/tpope/vim-fugitive.git"
