@@ -104,8 +104,8 @@ let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
-let g:ctags_command = '/usr/local/bin/ctags -R .'
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let g:ctags_command = '/opt/boxen/homebrew/bin/ctags -R .'
+let Tlist_Ctags_Cmd = '/opt/boxen/homebrew/bin/ctags'
 
 set tags+=gems.tags
 
