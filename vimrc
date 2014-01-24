@@ -10,6 +10,9 @@ set number
 set ruler
 syntax on
 
+" Relative line numbers
+set rnu
+
 set colorcolumn=80
 
 set encoding=utf-8
@@ -106,7 +109,7 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 set tags+=gems.tags
 
-let g:fugitive_git_executable = '/usr/local/bin/git'
+let g:fugitive_git_executable = '/opt/boxen/homebrew/bin/git'
 
 " Enable mouse support in terminal.app
 if has("mouse")
