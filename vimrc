@@ -104,8 +104,8 @@ let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
-let g:ctags_command = '/usr/local/bin/ctags -R .'
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let g:ctags_command = '/opt/boxen/homebrew/bin/ctags -R .'
+let Tlist_Ctags_Cmd = '/opt/boxen/homebrew/bin/ctags'
 
 set tags+=gems.tags
 
@@ -128,6 +128,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "!bundle exec rspec {spec}"
 
 " For chruby
 set shell=$SHELL\ -l
