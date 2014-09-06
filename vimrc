@@ -104,12 +104,12 @@ let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
-let g:ctags_command = '/opt/boxen/homebrew/bin/ctags -R .'
-let Tlist_Ctags_Cmd = '/opt/boxen/homebrew/bin/ctags'
+let g:ctags_command = '/usr/local/bin/ctags -R .'
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 set tags+=gems.tags
 
-let g:fugitive_git_executable = '/opt/boxen/homebrew/bin/git'
+let g:fugitive_git_executable = '/usr/local/bin/git'
 
 " Enable mouse support in terminal.app
 if has("mouse")
