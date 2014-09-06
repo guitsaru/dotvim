@@ -117,7 +117,7 @@ if has("mouse")
   set ttymouse=xterm2
 endif
 
-set background=light
+set background=dark
 color solarized
 
 " Make line numbers viewable in terminal vim
