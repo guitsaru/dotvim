@@ -1,7 +1,7 @@
 desc "installs pathogen"
 task :install_pathogen do
   puts "* installing pathogen"
-  sh "curl https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > vim/autoload/pathogen.vim"
+  sh "curl https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > vim/autoload/pathogen.vim"
 end
 
 PLUGIN_TASKS = []
@@ -26,7 +26,7 @@ namespace(:vwilight) do
   task :install do
     puts "* installing vwilight"
 
-    sh "curl https://raw.github.com/gist/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > vim/colors/vwilight.vim"
+    sh "curl https://raw.githubusercontent.com/gist/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > vim/colors/vwilight.vim"
   end
 
   PLUGIN_TASKS << "vwilight:install"
