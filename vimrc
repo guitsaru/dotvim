@@ -10,9 +10,6 @@ set number
 set ruler
 syntax on
 
-" Relative line numbers
-set rnu
-
 set colorcolumn=80
 
 set encoding=utf-8
